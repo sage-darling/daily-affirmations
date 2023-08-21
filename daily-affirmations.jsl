@@ -1,0 +1,47 @@
+
+Names Default to here(1);
+
+//-----------Variable Declarations (above Main for easy access)--
+
+	addinID = "com.jmpdiscovery.sdarling.dailyAffirmations";
+	
+
+///////////////////////////////
+//		  Functions          //
+///////////////////////////////
+
+
+dailyAffirmation = Function({},{default local},
+
+	dt = Open("$ADDIN_HOME(com.jmpdiscovery.sdarling.dailyAffirmations)\Daily Affirmations.jmp",private);
+
+	rand = randominteger(1,nrows(dt));
+	comment = dt:"UpliftingComment"n[rand];
+	dt << close window();
+	Return(comment);
+
+);
+
+dailyAffMsg = Function({comment},{default local},
+
+	New Window( "Starting off the analysis rightight!",
+		//<<Modal,
+		Show Menu(0),
+		Show Toolbars(0),
+		HlistBox(
+		Text Box( "    " ),
+		Text Box( comment, <<setfontstyle( "bold" ), <<setfontsize( 36 ), << set wrap(800) ),
+		Text Box( "    " )
+		)
+	);
+	
+);
+
+////////////////////////////////////////
+//                                    //
+//              Main                  //
+//                                    //
+////////////////////////////////////////
+
+	dailyAff = dailyAffirmation();
+	dailyAffMsg(dailyAff);
