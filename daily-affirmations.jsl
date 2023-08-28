@@ -24,7 +24,7 @@ dailyAffirmation = Function({},{default local},
 
 dailyAffMsg = Function({comment},{default local},
 
-	New Window( "Starting off the analysis rightight!",
+	New Window( "Starting off the analysis right!",
 		//<<Modal,
 		Show Menu(0),
 		Show Toolbars(0),
