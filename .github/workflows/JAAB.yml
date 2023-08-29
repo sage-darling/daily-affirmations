@@ -14,3 +14,7 @@ jobs:
          addin_id: com.jmpdiscovery.sdarling.dailyAffirmations
          addin_name:  dailyAffirmations
          jmpcust_txt_file: jmpcust.txt
+         make_meta_file: true
+         pub_name: pubaddins.jsl
+         final_pub_path: R:/JMPDiscovery/JMP Addins/Deployment/
+         tag_suffix: false
