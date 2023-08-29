@@ -1,0 +1,24 @@
+<!-- JMP Add-In Builder created --><jm:menu_and_toolbar_customizations xmlns:jm="http://www.jmp.com/ns/menu" version="3">
+<jm:insert_in_main_menu>
+    <jm:insert_after>
+        <jm:name></jm:name>
+        <jm:menu>
+
+            <jm:name>JMP Discovery 2023</jm:name>
+                <jm:caption>JMP Discovery 2023</jm:caption>
+            <jm:menu>
+                <jm:name>A Pick Me Up!</jm:name>
+                    <jm:caption>A Pick Me Up!</jm:caption>
+                <jm:command>
+                    <jm:name>Daily Affirmations</jm:name>
+                        <jm:caption>Daily Affirmations TOOLTAG</jm:caption>
+                        <jm:action type="path">$ADDIN_HOME(AdDinIDDoNotTouCHY)\daily-affirmations.jsl</jm:action>
+                        <jm:tip>You are smart! You are worthy!</jm:tip>
+                        <jm:icon type="path">$ADDIN_HOME(AdDinIDDoNotTouCHY)\happy.ico</jm:icon>
+                </jm:command>
+            </jm:menu>
+            
+        </jm:menu>
+    </jm:insert_after>
+</jm:insert_in_main_menu>
+</jm:menu_and_toolbar_customizations>
