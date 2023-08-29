@@ -1,0 +1,16 @@
+on:
+  release:
+    types:
+      - published
+jobs:
+  build-addin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Example Addin Build with Project JAAB
+        id: Project-JAAB
+        uses: sage-darling/Project-JAAB@v1.0
+        with:
+         Token: ${{ secrets.JMP_DISCOVERY }} 
+         addin_id: com.jmpdiscovery.sdarling.dailyAffirmations
+         addin_name:  dailyAffirmations
+         jmpcust_txt_file: jmpcust.txt
